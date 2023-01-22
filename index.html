@@ -10,11 +10,12 @@
   <title>Weather Dashboard</title>
 </head>
   <body>
-    <header class="p-5 mb-4 border-5 bg-primary text-center text-white">
+    <header class="p-5 mb-4 border-5 bg-primary text-center text-white rounded">
         <h1>Weather Dashboard</h1>
     </header>
-    <div class="container">
-        <section class="col-3">
+    <div class="container-fluid">
+        <div class="row align-items-start">
+        <section class="col-3 flex m-5">
             <h3>Search City</h3>
             <input
                   type="text"
@@ -24,23 +25,23 @@
                 />
             <button type="button" class="btn btn-primary" id="search-button">Search</button>
             <p id="error-message"></p>
-        </section>
-        <section>
             <button class="btn custom-btn" id="previous-searches">   
             </button>
         </section>
-    </div>
-    <div class="container">
-        <div class="col-8 border-5">
-            <section class="row" >
+        <section class="container col-6 border-5 bg-primary text-white p-3 m-5">
+            <div class='col-3'>
                 <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
-                        <p>Temperature:<span class="current" id="temperature"></span></p>
-                        <p>Humidity:<span class="current" id="humidity"></span></p> 
-                        <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
+                        <p>Temperature:<span class="current col-2" id="temperature"></span></p>
+                        <p>Humidity:<span class="current col-2" id="humidity"></span></p> 
+                        <p>Wind Speed:<span class="current col-2" id="wind-speed"></span></p>
+            </div>
+            <section class="col-2">
+            <div class="col-2" id="currentImg">
+            </div>
             </section>
-        </div>
+        </section>
     </div>
-    <section class="col">
+    <section class="col m-5">
     <div class="col-sm-12" id ="future-weather">
         <h3>5-Day Forecast:</h3>
         <div class="row text-light">
@@ -70,7 +71,7 @@
             </div>
             <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
                 <p id="futureDate4"></p>
-                <p id="futureImg4"></p>
+                <div id="futureImg4"></div>
                 <p>Temp:<span id="futureTemp4"></span></p>
                 <p>Humidity:<span id="futureHumidity4"></span></p>
             </div>
