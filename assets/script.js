@@ -48,7 +48,7 @@ function fetchAPI() {
         return
     }
     document.getElementById('city-search').value = "";
-    let latLonUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + citySearch + '&limit=5&appid=' + apiKey;
+    let latLonUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=' + citySearch + '&limit=5&appid=' + apiKey;
     // make a call to that new api
     fetch(latLonUrl)
         .then(function (resp) {
